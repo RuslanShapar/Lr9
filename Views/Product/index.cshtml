@@ -1,0 +1,50 @@
+﻿@model List<ProductModel>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #333;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+    }
+
+    table {
+        margin: 0 auto;
+    }
+
+    .list-view li {
+        list-style-type: none;
+        margin-bottom: 10px;
+    }
+
+    .table-view th,
+    .table-view td {
+        padding: 8px;
+        text-align: center;
+    }
+
+    .table-view th {
+        background-color: black;
+    }
+</style>
+
+<table class="table-view" border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.ID</td>
+                <td>@product.Name</td>
+                <td>@product.Price$</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,25 @@
+﻿@model Lr9.Models.WeatherModel
+
+<h1 style="text-align: center;">Weather in @Model.City</h1>
+<div class="weather-info" style="text-align: center;">
+    <p>Country: @Model.Country</p>
+    <p>Temperature: @(Math.Round(Model.Temperature, 2)) &deg;C</p>
+    <p>Description: @Model.Description</p>
+</div>
+
+<style>
+    .weather-info {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-top: 20px;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        color: black;
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+        .weather-info p {
+            margin: 5px 0;
+        }
+</style>
